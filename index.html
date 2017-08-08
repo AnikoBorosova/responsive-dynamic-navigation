@@ -209,24 +209,7 @@ p {
   </section>
 <script id="jsbin-javascript">
 $(document).ready(function() {
-
-  /* function to toggle the navigation bar
-  and make the scroll of links smooth on mobile view*/
-
-  $('.toggle-button').click(function() {
-    $('.nav').slideToggle(300);
-
-    var $root = $('html, body');
-    $('a').click(function() {
-      $root.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-      }, 900);
-      return false;
-    });
-
-  });
-
-  /* function for smooth scroll on tablet and desktop view */
+  /* function for smooth scroll */
   var $root = $('html, body');
   $('a').click(function() {
     $root.animate({
@@ -235,6 +218,11 @@ $(document).ready(function() {
     return false;
   });
 });
+/* function to toggle the navigation bar on mobile view*/
+$('.toggle-button').click(function() {
+  $('.nav').slideToggle(300);
+});
+
 </script>
 </body>
 
